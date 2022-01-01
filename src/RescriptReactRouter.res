@@ -17,11 +17,11 @@ external dispatchEvent: (Dom.window, Dom.event) => unit = "dispatchEvent"
 @get external search: Dom.location => string = "search"
 
 @send
-external pushState: (Dom.history, @as(json`null`) _, @as("") _, ~href: string) => unit =
+external pushState: (Dom.history, @as(json`null`) _, @as(json`""`) _, ~href: string) => unit =
   "pushState"
 
 @send
-external replaceState: (Dom.history, @as(json`null`) _, @as("") _, ~href: string) => unit =
+external replaceState: (Dom.history, @as(json`null`) _, @as(json`""`) _, ~href: string) => unit =
   "replaceState"
 
 @val external event: 'a = "Event"
